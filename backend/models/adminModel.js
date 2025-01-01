@@ -52,4 +52,3 @@ export const Admin = mongoose.model("Admin", adminSchema);
 
 
 
-//edited
