@@ -48,3 +48,8 @@ adminSchema.methods.isValidPassword = async function (candidatePassword) {
 };
 
 export const Admin = mongoose.model("Admin", adminSchema);
+
+
+
+
+//edited
