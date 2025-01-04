@@ -1,7 +1,6 @@
-// pages/AddNotice.jsx
 import React, { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // Modified: Added Link for navigation to home
 
 const AddNotice = () => {
   const [title, setTitle] = useState("");
@@ -49,6 +48,14 @@ const AddNotice = () => {
           Add Notice
         </button>
       </form>
+      {/* Added: "Go Home" button */}
+      <div className="mt-6">
+        <Link to="/">
+          <button className="bg-gray-500 hover:bg-gray-700 text-white px-4 py-2 rounded">
+            Go Home
+          </button>
+        </Link>
+      </div>
     </div>
   );
 };
