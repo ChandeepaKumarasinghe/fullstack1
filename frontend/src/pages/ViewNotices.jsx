@@ -37,9 +37,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import { useAuth } from "../context/AuthContext";
 
 const ViewNotices = () => {
   const [notices, setNotices] = useState([]);
+  const { user } = useAuth();
+  const userType = user?.userType;
 
   useEffect(() => {
     axios
@@ -52,11 +55,13 @@ const ViewNotices = () => {
     <div className="p-4">
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-2xl">All Notices</h1>
-        <Link to="/add-notice">
-          <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
-            Add Notice
-          </button>
-        </Link>
+        {userType === "adminUser" && (
+          <Link to="/add-notice">
+            <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+              Add Notice
+            </button>
+          </Link>
+        )}
       </div>
       {notices.length === 0 ? (
         <p>No notices found</p>
