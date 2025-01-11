@@ -17,4 +17,4 @@ jobs:
         run: docker build -t savyy11/coursework-group_35:latest .
         
       - name: Push to DockerHub
-        run: docker push savyy11/coursework-group_35:latest .
+        run: docker push savyy11/coursework-group_35:latest
