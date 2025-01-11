@@ -1,20 +1,20 @@
-name: Docker Image CI
+# name: Docker Image CI
 
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+# on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Login to DockerHub
-        run: docker login -u savyy11 -p Savindya#1
-      - name: Build the Docker image
-        run: docker build -t savyy11/coursework-group_35:latest .
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - name: Login to DockerHub
+#         run: docker login -u savyy11 -p Savindya#1
+#       - name: Build the Docker image
+#         run: docker build -t savyy11/coursework-group_35:latest .
         
-      - name: Push to DockerHub
-        run: docker push savyy11/coursework-group_35:latest
+#       - name: Push to DockerHub
+#         run: docker push savyy11/coursework-group_35:latest
