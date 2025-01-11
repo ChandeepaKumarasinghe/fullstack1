@@ -14,6 +14,7 @@ jobs:
       - name: Login to DockerHub
         run: docker login -u savyy11 -p Savindya#1
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag savyy11/my-image-name:$(date +%s)
+        run: docker build -t savyy11/coursework-group_35:latest .
+        
       - name: Push to DockerHub
-        run: docker push savyy11/my-image-name:$(date +%s)
+        run: docker push savyy11/coursework-group_35:latest .
