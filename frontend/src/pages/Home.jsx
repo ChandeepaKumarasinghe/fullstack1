@@ -234,14 +234,13 @@ const Home = () => {
           data-testid="logout-button"
         >
           Logout
-        </button>{" "}
-        {userType ? (
-          <p></p>
-        ) : (
-          <p data-testid="admin-message">
-            only admins are allow the add, delete or modify the books details
-          </p>
-        )}
+        </button>
+        &nbsp;
+        <Link to="#">
+          <button className="bg-green-500 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+            Live Chat
+          </button>
+        </Link>
       </div>
     </div>
   );
