@@ -19,6 +19,7 @@ import ViewStaff from "./pages/ViewStaff";
 import AddStaff from "./pages/AddStaff";
 import ViewPayments from "./pages/ViewPayments";
 import AddPayment from "./pages/AddPayment";
+import Chats from './pages/Chats';
 
 const App = () => {
   return (
@@ -121,7 +122,16 @@ const App = () => {
           </PrivateRoute>
         }
       />
+      <Route
+        path="/chat"
+        element={
+          <PrivateRoute>
+            <Chats /> 
+          </PrivateRoute>
+        }
+      />
     </Routes>
+    
   );
 };
 
